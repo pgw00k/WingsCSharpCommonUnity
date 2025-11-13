@@ -5,12 +5,10 @@
  * 
 */
 
-using System.Collections;
 using System.IO;
 using System.Text.RegularExpressions;
-using System.Collections.Generic;
-using UnityEngine;
 using UnityEditor;
+using UnityEngine;
 
 namespace GenOcean.Unity.Editor
 {
@@ -42,12 +40,13 @@ namespace GenOcean.Unity.Editor
 
         #region Unity Methods
 
-        public static void OnWillSaveAssets(string path)
+        public static void OnWillCreateAsset(string path)
         {
-            
-            string rawFile = _Regex.Replace(path, "");
-            if (rawFile.ToLower().EndsWith(".cs"))
+            //Debug.Log(path);
+            //EditorUtility.DisplayDialog("Message", path, "OK");
+            if (path.ToLower().EndsWith(".cs.meta"))
             {
+                string rawFile = _Regex.Replace(path, "");
                 string content = File.ReadAllText(rawFile);
                 content = content.Replace("#CREATETIME#", System.DateTime.Now.ToString(CREATE_TIME_FORMAT));
                 File.WriteAllText(rawFile, content);

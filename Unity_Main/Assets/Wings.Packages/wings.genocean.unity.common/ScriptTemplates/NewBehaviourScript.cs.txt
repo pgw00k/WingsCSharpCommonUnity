@@ -1,0 +1,22 @@
+/*
+ * 
+ * Author:      Wings
+ * CreateTime:  CREATETIME
+ * 
+*/
+
+using UnityEngine;
+
+#ROOTNAMESPACEBEGIN#
+public class #SCRIPTNAME# : MonoBehaviour
+{
+    public virtual void Start()
+    {
+        #NOTRIM#
+    }
+    public virtual void Update()
+    {
+        #NOTRIM#
+    }
+}
+#ROOTNAMESPACEEND#

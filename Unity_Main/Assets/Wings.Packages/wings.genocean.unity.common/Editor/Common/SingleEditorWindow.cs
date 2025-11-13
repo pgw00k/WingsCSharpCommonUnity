@@ -12,6 +12,10 @@ using UnityEditor;
 
 namespace GenOcean.Unity.Editor
 {
+    /// <summary>
+    /// 在编辑器中可以使用的单例窗口
+    /// </summary>
+    /// <typeparam name="T"></typeparam>
     public class SingleEditorWindow<T> : EditorWindow
         where T : EditorWindow
     {

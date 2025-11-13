@@ -42,7 +42,7 @@ namespace GenOcean.Unity.Editor
 
         #region Unity Methods
 
-        public static void OnWillCreateAsset(string path)
+        public static void OnWillSaveAssets(string path)
         {
             
             string rawFile = _Regex.Replace(path, "");

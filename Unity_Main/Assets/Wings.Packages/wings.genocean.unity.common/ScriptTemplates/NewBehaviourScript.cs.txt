@@ -8,15 +8,15 @@
 using UnityEngine;
 
 #ROOTNAMESPACEBEGIN#
-public class #SCRIPTNAME# : MonoBehaviour
-{
-    public virtual void Start()
+    public class #SCRIPTNAME# : MonoBehaviour
     {
-        #NOTRIM#
+        public virtual void Start()
+        {
+            #NOTRIM#
+        }
+        public virtual void Update()
+        {
+            #NOTRIM#
+        }
     }
-    public virtual void Update()
-    {
-        #NOTRIM#
-    }
-}
 #ROOTNAMESPACEEND#
